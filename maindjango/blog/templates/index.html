@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Log In - Kit</title>
+    <meta name="description" content="Log in to your Kit account and connect with your audience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="convertkit_features" content="rebrand_2024" />
+  <link rel="stylesheet" href="https://cdn.kit.com/assets/application-0b13e21e5a5a2e3ed3ba676753779c1a4e1966aa4ce24a4baf17ddfeddf62caf.css" media="all" />
+  <link rel="stylesheet" href="https://cdn.kit.com/packs/css/styles-e720c02f.chunk.css" media="screen" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <script>
+    if (
+      navigator.userAgent.indexOf("Safari") != -1 &&
+      navigator.userAgent.indexOf("Chrome") == -1 &&
+      (navigator.userAgent.indexOf("Version/16.1") != -1 ||
+        navigator.userAgent.indexOf("Version/16.2") != -1 ||
+        navigator.userAgent.indexOf("Version/16.3") != -1)
+    ) {
+      var root = document.getElementsByTagName("html")[0]
+      root.classList.add("isSafari16")
+    }
+  </script>
+
+  <style>
+    html.isSafari16 {
+      font-variation-settings: 'opsz' 14;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      font-family: KitSansBold;
+      font-weight: bold;
+      src: url("/fonts/KitSansBold.woff") format("woff");
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdn.kit.com/assets/design-system-rebrand-ebe37f18f3fd42c4af466d46f1d46b8cea307ddc77407efa8ffe9eac6bd8e23a.css" media="screen" />
+
+  <link rel="stylesheet" href="https://cdn.kit.com/assets/tailwind-8a52aa10c7ffc93d21ef5875edbd3e735cac25e367f0eff0f5352f99f8926ff2.css" media="screen" />
+
+  
+  <meta content="vm7rcfzd6y-d3kzvo7d57drcfh-ubrztn43-7efuycirktrsunq6icgz009lhtkzilfjm68ovge7aey22dp80w7yby3xxwx9iabq-ykqm9nu9bgeubc0f3e5hseyx4h6" name="norton-safeweb-site-verification" />
+
+  <script src="https://cdn.kit.com/assets/application-38a6faeedaa1195670321b02e997dfe0c1a785897917a0e173196f19dbb03de6.js"></script>
+  
+  
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="E5qL7KlmtbKXsENbrQ0evpKIb58ITrK20CJHc1Z2JBulY_D6Uyv50zwdcE0asJwI_BFL64A5uF5huLLA1siqYA" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.kit.com/assets/favicon-fec1de03350a05b77c95fef9235c9a7a8c096ae4ff9992a0f2ee2d90115aa705.ico" />
+
+  <script type="text/javascript">
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+
+      analytics.load("5la8fKk4tqo45Ny5myS76pELme4jtbQW", {
+        integrations: { "FullStory": false }
+      });
+
+  }}();
+
+  window.onload = function() {
+    var options = {
+      "App Feature Group": "Other",
+      "Page Title": "Log In - Kit"
+    };
+
+    if (window.performance && window.performance.timing) {
+      var now = new Date().getTime();
+      options["Load Time"] = now - performance.timing.navigationStart;
+    }
+
+
+    var pageName = "Visited page";
+    analytics.page(pageName, options);
+
+
+  };
+</script>
+
+  <script type="text/javascript">
+    window.app = window.app || {};
+        window.app.user = {
+            anonymous: true
+        };
+</script>
+
+
+  
+  
+  
+
+  <script src="https://kit.fontawesome.com/c2498cba33.js" async></script>
+
+
+  <script>
+    $(document).ready(function() {
+      window.addEventListener("storage", function(e) {
+        if ("".length > 0 && (e.key == "current_account_id" || e.key == "current_account_id_switched_back")) {
+          var oldValue = JSON.parse(e.oldValue);
+          var newValue = JSON.parse(e.newValue);
+
+          var switchBackButton = $("#switchAccountFromModal");
+          switchBackButton.attr("href", "/account_users/null/switch");
+          if (oldValue != undefined) {
+            switchBackButton.data("accountId", oldValue.account_id);
+            switchBackButton.data("accountEmail", oldValue.account_email);
+            switchBackButton.text(oldValue.account_email);
+          }
+
+          var continueButton = $("#continueWithCurrentAccount");
+          continueButton.text(newValue.account_email);
+
+          if (newValue.account_id.toString() == "") {
+            $("#accountSwitchedModal").modal("hide");
+          } else {
+            $("#accountSwitchedModal").modal("show");
+          }
+        }
+      })
+    })
+  </script>
+</head>
+
+
+<body class="  sessions bg-warm-white-100">
+  <div class="page" ng-app="ckUnrouted" id="ck-page">
+    <div class="content_wrapper min-h-screen">
+      
+      <div class='alerts' id='alerts'>
+</div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      <div data-component="Page" data-props="{&quot;returnToPath&quot;:null,&quot;invitationFrom&quot;:null,&quot;authenticityToken&quot;:&quot;ul9PyeNf9COfHkt78OIPnWFehzQN2p_3rPFsNjyzITsMpjTfGRK4QjSzeG1HX40rD8ejQIWtlR8da5mFvA2vQA&quot;,&quot;signupLink&quot;:&quot;/users/signup?plan=1k&quot;,&quot;passwordLink&quot;:&quot;/users/password/new&quot;,&quot;formAction&quot;:&quot;/users/login&quot;,&quot;shopifyHack&quot;:false}" data-page="users/login" ng-non-bindable="" style="display: flex; flex: 1 1 auto"></div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.kit.com/packs/js/runtime-8e6e7d0e86c39382905c.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/styles-873b907263866865b57b.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/fontawesome~admin~app~bulk~layout~pages~workflow~workflow-preview-b1195b22a9e54d467cb8.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/react~admin~app~bulk~layout~pages~workflow~workflow-preview-51f25dbb1f01134d982b.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/vendor~app~chunk-account-closed0~chunk-account-expired4~chunk-account-failed6~chunk-account-newslett~e26aef77-28680cc5b17a50329265.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/6-8a322babd06e3d8c1de6.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/45-521c1f631a5bcae7936c.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/vendor~admin~app~bulk~layout~pages~workflow~workflow-preview-519db5f0d6a7dac4b0c5.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/vendor~admin~app~bulk~layout~pages~workflow-31bf1c727822db0467c8.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/vendor~layout-e6f3e7cd6320ab75f0e0.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/admin~app~bulk~layout~pages~workflow-20ceffae268099b04f45.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/layout-d73ce15cfb7e1d94906f.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/3-ae68f01c743d4e76ac59.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/vendor~chunk-adventures-show190~chunk-creator-network-customize240~chunk-creator-network-setup-creat~b5da2788-0ca3fda0e46bad4aeb36.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/vendor~pages-31f44636b7698aa9f0ed.chunk.js?app" crossorigin="anonymous"></script>
+<script src="https://cdn.kit.com/packs/js/pages-e5e1515c68b4224bba1e.chunk.js?app" crossorigin="anonymous"></script>
+
+  
+
+  
+  
+    <script src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script>
+    const sp = new StatusPage.page({ page : 'convertkit' });
+    sp.summary({
+      success : function(data) {
+        if (data.incidents.length || data.status.indicator != "none") {
+          const logo = document.getElementById("convertkit-logo");
+          const title = data.incidents[0]?.name || data.scheduled_maintenances[0]?.id || data.status.description
+          const link = document.createElement('a')
+
+          link.classList.add('-ml-8', 'text-yellow-400', 'hover:text-yellow-600', 'hover:no-underline')
+          link.target = '_blank'
+          link.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"><path d="M12 8.63a.75.75 0 0 1 .75.75v3.74a.75.75 0 0 1-1.5 0V9.38a.75.75 0 0 1 .75-.75zm-.003 7.52a.85.85 0 1 0 .007 1.7.85.85 0 0 0-.007-1.7z"></path><path fill-rule="evenodd" d="M19.66 21.79c2.37 0 3.855-2.561 2.68-4.62L14.68 3.767c-1.184-2.075-4.175-2.075-5.36 0L1.66 17.171c-1.176 2.058.31 4.619 2.68 4.619h15.32zm0-1.5a1.588 1.588 0 0 0 1.378-2.375L13.378 4.51a1.586 1.586 0 0 0-2.755 0l-7.66 13.405a1.587 1.587 0 0 0 1.378 2.375H19.66z" clip-rule="evenodd"></path></svg>'
+          link.href = `http://status.convertkit.com`
+          link.title = title
+
+          if (logo) {
+            logo.after(link)
+          }
+        } else {
+          return false;
+        }
+      }
+    });
+  </script>
+
+  
+
+
+
+  
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8d0378ad0b18a8e8","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.1","token":"956a6cbe10fd464d824aeaf17abb10a8"}' crossorigin="anonymous"></script>
+</body>
+</html>
